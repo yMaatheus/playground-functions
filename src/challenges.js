@@ -81,11 +81,52 @@ function isDivisivel(dividendo, divisor) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let exit = "";
+  for (let index of text) {
+    if (index === "a") {
+      exit += "1";
+      continue;
+    } else if (index === "e") {
+      exit += "2";
+      continue;
+    } else if (index === "i") {
+      exit += "3";
+      continue;
+    } else if (index === "o") {
+      exit += "4";
+      continue;
+    } else if (index === "u") {
+      exit += "5";
+      continue;
+    }
+    exit += index;
+  }
+  return exit;
 }
-function decode() {
-  // seu código aqui
+
+function decode(text) {
+  let exit = "";
+  for (let index of text) {
+    if (index === "1") {
+      exit += "a";
+      continue;
+    } else if (index === "2") {
+      exit += "e";
+      continue;
+    } else if (index === "3") {
+      exit += "i";
+      continue;
+    } else if (index === "4") {
+      exit += "o";
+      continue;
+    } else if (index === "5") {
+      exit += "u";
+      continue;
+    }
+    exit += index;
+  }
+  return exit;
 }
 
 module.exports = {
