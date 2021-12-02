@@ -58,8 +58,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let exit = [];
+  for (let index of array) {
+    if (isDivisivel(index, 3) && isDivisivel(index, 5)) {
+      exit.push("fizzBuzz");
+      continue;
+    } else if (isDivisivel(index, 3)) {
+      exit.push("fizz");
+      continue;
+    } else if (isDivisivel(index, 5)) {
+      exit.push("buzz");
+      continue;
+    }
+    exit.push("bug!");
+  }
+  return exit;
+}
+
+function isDivisivel(dividendo, divisor) {
+  return (dividendo % divisor === 0);
 }
 
 // Desafio 9
