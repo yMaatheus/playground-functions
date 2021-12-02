@@ -1,7 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  // adsad
+function compareTrue(arg1, arg2) {
+  if (arg1 === true && arg2 === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
