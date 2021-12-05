@@ -34,7 +34,6 @@ Link: https://www.horadecodar.com.br/2021/06/29/encontrar-maior-e-menor-numero-d
 */
 function highestCount(array) {
   let higherNumber = Math.max(...array);
-  console.log(higherNumber);
   let count = 0;
   for (let index of array) {
     if (index === higherNumber) {
