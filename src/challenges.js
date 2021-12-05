@@ -34,10 +34,11 @@ Link: https://www.horadecodar.com.br/2021/06/29/encontrar-maior-e-menor-numero-d
 */
 function highestCount(array) {
   let higherNumber = Math.max(...array);
+  console.log("higherNumber: " + higherNumber);
   let count = 0;
   for (let index of array) {
     if (index === higherNumber) {
-      count = +1;
+      count += 1;
     }
   }
   return count;
