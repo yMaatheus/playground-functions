@@ -12,9 +12,35 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  
+function generatePhoneNumber(array) {
+  if (array.length != 11) {
+    return "Array com tamanho incorreto.";
+  }
+  function numberIsInvalid(n) {
+    return n < 0 || n > 9;
+  }
+  if (array.filter(numberIsInvalid).length > 0) {
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  let number = "(" + array[0] + array[1] + ") ";
+  for (let index = 2; index < array.length; index += 1) {
+    if (index >= 2) {
+      if (index === 7) {
+        number += "-";
+      }
+      number += array[index];
+    }
+    function numberRepeat(n) {
+      return n === array[index];
+    }
+    if (array.filter(numberRepeat).length >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  return number;
 }
+
+console.log(generatePhoneNumber([1, 1, 12, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
