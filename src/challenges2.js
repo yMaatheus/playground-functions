@@ -53,8 +53,29 @@ function triangleCheck(LineA, LineB, LineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let soma = 0;
+  if (string.includes(",") || string.includes(" e ")) {
+    let array = string.split(",");
+    // let numbers = [];
+    if (string.includes(" e ")) {
+      let last = string.split(" e ")[1];
+      soma += parseInt(last);
+      // numbers.push(parseInt(last));
+    }
+    for (let value of array) {
+      const number = parseInt(value);
+      soma += number;
+      // numbers.push(number);
+    }
+    // console.log(numbers);
+  } else {
+    soma += parseInt(string);
+  }
+  if (soma <= 1) {
+    return soma + " copo de água";
+  }
+  return soma + " copos de água";
 }
 
 module.exports = {
