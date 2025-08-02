@@ -1,4 +1,4 @@
-# Projeto Playground Functions
+# Playground Functions
 
 # Habilidades Desenvolvidas
 
