@@ -1,5 +1,3 @@
-# Playground Functions
-
 # Habilidades Desenvolvidas
 
 - Escrever códigos em JavaScript que usam variáveis e tipos primitivos;
